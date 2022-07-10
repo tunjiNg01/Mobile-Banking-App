@@ -49,19 +49,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\fa-brands-400.ttf" />
 	  <None Remove="Resources\Fonts\fa-regular-400.ttf" />
 	  <None Remove="Resources\Fonts\Rubik-Bold.ttf" />
 	  <None Remove="Resources\Fonts\Rubik-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Rubik-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Rubik-SemiBold.ttf" />
+	  <None Remove="Resources\Images\headerbg.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Controls\" />
 	  <Folder Include="Models\" />
-	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Services\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\BalanceInfoDataTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\DashboardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SignPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

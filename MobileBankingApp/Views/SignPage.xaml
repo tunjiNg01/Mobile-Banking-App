@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileBankingApp.Views.SignPage"
+             Shell.NavBarIsVisible="False"
+             xmlns:helper="clr-namespace:MobileBankingApp.Helpers"
+             Title="SignPage">
+    <Grid RowDefinitions="1*, 3*" >
+        <Image Source="headerbg" Aspect="AspectFill"/>
+        
+        <VerticalStackLayout Padding="24, 0"
+                             VerticalOptions="Center">
+            <Label Text="Welcome back!" 
+               FontSize="Medium" 
+               FontFamily="BoldFont"
+                   />
+            <Label Margin="0, 10" LineHeight="1.2">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Login to enjoy all features &#10;from" FontFamily="SmallFont"
+                              FontSize="Body"/>
+                        <Span Text=" Blocks" FontFamily="MediumFont" 
+                              
+                              FontSize="Body"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </VerticalStackLayout>
+        <Frame Padding="24, 15" Grid.Row="1" Margin="0, -12" HasShadow="False"
+               BorderColor="Transparent"
+               CornerRadius="16"
+               >
+           
+            <VerticalStackLayout>
+                <BoxView Color="{StaticResource Gray200}" 
+                     HeightRequest="3"
+                     VerticalOptions="Start"
+                     WidthRequest="55" CornerRadius="1.5"/>
+
+                <Label Text="Email" Margin="0, 50, 0,0"
+                       FontFamily="MediumFont"
+                       FontSize="Small" />
+                <Border Stroke="Transparent" Margin="0,8">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Grid ColumnDefinitions="*, 24" BackgroundColor="#EFEFF0"
+                          Padding="16, 4" HeightRequest="44">
+                        <Entry Placeholder="Please enter your email" PlaceholderColor="{StaticResource Gray300}"
+                               FontFamily="RegularFont" FontSize="Small"
+                               />
+                    </Grid>
+                </Border>
+
+                <Label Text="Password" Margin="0, 16, 0,0"
+                       FontFamily="MediumFont"
+                       FontSize="Small"/>
+                <Border Stroke="Transparent" Margin="0,8">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Grid ColumnDefinitions="*, 24" BackgroundColor="#EFEFF0"
+                          Padding="16, 2" HeightRequest="44">
+                        <Entry Placeholder="Please enter your password" PlaceholderColor="{StaticResource Gray300}"
+                               FontFamily="RegularFont" FontSize="Small"
+                               />
+                    </Grid>
+                </Border>
+                <Label Text="Forgot Password" TextDecorations="Underline"
+                       FontSize="Small" FontFamily="BoldFont"
+                       HorizontalOptions="End" Margin="0, 8"
+                       TextColor="{StaticResource Primary}"></Label>
+                <Button Text="Login" Margin="0,16" FontFamily="MediumFont" FontSize="Small"
+                        Padding="0,12" CornerRadius="24"/>
+                <Grid ColumnDefinitions="*, *, *" Margin="0, 30">
+                    <BoxView Color="{StaticResource Gray200}" 
+                     HeightRequest="1"
+                     VerticalOptions="Center"
+                     CornerRadius="1.5"/>
+                    
+                    <Label Text="Or login with" Padding="8,0"
+                           TextColor="{StaticResource Gray300}" HorizontalOptions="Center"
+                           FontSize="Small" FontFamily="MediumFont" Grid.Column="1"/>
+                    
+                    <BoxView Color="{StaticResource Gray200}" 
+                     HeightRequest="1"
+                     VerticalOptions="Center" Grid.Column="2"
+                     CornerRadius="1.5"/>
+
+
+                </Grid>
+                
+                <Grid ColumnDefinitions="*, *">
+                    <ImageButton BackgroundColor="#EFEFF0" Padding="12" CornerRadius="8">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="IconSetBrand" Glyph="{x:Static helper:BrandIcon.Google}"
+                                             Color="Black" Size="24"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+
+                    <ImageButton BackgroundColor="#EFEFF0" Padding="12" CornerRadius="8" Grid.Column="1">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="IconSetBrand" Glyph="{x:Static helper:BrandIcon.Apple}"
+                                             Color="Black" Size="24"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+                   
+                    
+                </Grid>
+            </VerticalStackLayout>
+
+
+        </Frame>
+
+    </Grid>
+</ContentPage>
